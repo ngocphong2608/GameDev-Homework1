@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/forest.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel01.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel02.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel03.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel04.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel05.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel06.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel07.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel08.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel09.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel10.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel11.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel12.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel13.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel14.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Angel15.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman00.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman01.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman02.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman03.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman04.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman05.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman06.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman07.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman08.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman09.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman10.png</File>
+    <File>D:/Study/Game-Homeworrks/Homework1/Homework1/Content/Rockman11.png</File>
+  </SourceFiles>
+</SourceFileCollection>
