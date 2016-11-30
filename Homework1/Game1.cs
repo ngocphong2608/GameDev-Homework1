@@ -56,11 +56,11 @@ namespace Homework1
             
 
             // load background
-            textures.Add(new MyTexture("forest", 0, 0, 800, 600));
+            entities.Add(new MyTexture("forest", 0, 0, 800, 600));
 
             GenerateAngle("Angel", 15, 50, 0);
 
-            GenerateRockman(50, 100);
+            GenerateRockman(50, 500);
 
             //GenerateNPC("Rockman", 11, 50, 100);
         }
@@ -134,10 +134,10 @@ namespace Homework1
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, null, null, null, null, Global.Camera.WVP);
 
             // drawing textures
-            for (int i = 0; i < textures.Count; i ++)
-            {
-                textures[i].Draw(gameTime, spriteBatch);
-            }
+            //for (int i = 0; i < textures.Count; i ++)
+            //{
+            //    textures[i].Draw(gameTime, spriteBatch);
+            //}
 
             // drawing sprites
             //for (int i = 0; i < sprites.Count; i++)

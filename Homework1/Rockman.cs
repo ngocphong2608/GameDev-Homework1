@@ -27,6 +27,12 @@ namespace Homework1
         public override void Update(GameTime gameTime)
         {
             sprite.Update(gameTime);
+
+            sprite.Left += 1;
+            if (sprite.Left >= 800)
+            {
+                sprite.Left = 0;
+            }
         }
     }
 }
