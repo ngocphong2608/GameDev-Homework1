@@ -42,11 +42,20 @@ namespace Homework1
         public override void Draw(GameTime gameTime, object helper)
         {
             SpriteBatch spriteBatch = (SpriteBatch)helper;
-            spriteBatch.Draw(texture, new Vector2(left, top), Color.White);
-            //if (State == 0)
-            //    spriteBatch.Draw(Textures[iTexture], new Vector2(Left, Top), Color.White);
-            //else
-            //    spriteBatch.Draw(Textures[iTexture], new Vector2(Left, Top), Color.Yellow);
+            
+            if (State == 0)
+                spriteBatch.Draw(texture, new Vector2(left, top), Color.White);
+            else
+                spriteBatch.Draw(texture, new Vector2(left, top), Color.Black);
+        }
+
+        public override bool IsSelected(float x, float y)
+        {
+            if (x >= left && x < left + width
+                && y >= top && y < top + height)
+                return true;
+            else
+                return false;
         }
     }
 }

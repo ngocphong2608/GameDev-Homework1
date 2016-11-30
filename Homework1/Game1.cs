@@ -58,7 +58,7 @@ namespace Homework1
             // load background
             entities.Add(new MyTexture("forest", 0, 0, 800, 600));
 
-            GenerateAngle("Angel", 15, 50, 0);
+            GenerateAngle("Angel", 15, 50, 400);
 
             GenerateRockman(50, 500);
 
@@ -95,22 +95,22 @@ namespace Homework1
                 Vector2 screenPos = new Vector2(ScreenX, ScreenY);
                 Vector2 worldPos = Vector2.Transform(screenPos, Global.Camera.InvWVP);
 
-                //int selectedIdx = -1;
-                //for (int i = sprites.Count - 1; i >= 0; i--)
-                //    if (sprites[i].IsSelected(worldPos.X, worldPos.Y)) //Global.MouseHelper.GetCurrentX(), Global.MouseHelper.GetCurrentY()))
-                //    {
-                //        selectedIdx = i;
-                //        break;
-                //    }
+                int selectedIdx = -1;
+                for (int i = entities.Count - 1; i >= 0; i--)
+                    if (entities[i].IsSelected(worldPos.X, worldPos.Y)) //Global.MouseHelper.GetCurrentX(), Global.MouseHelper.GetCurrentY()))
+                    {
+                        selectedIdx = i;
+                        break;
+                    }
 
-                //if (selectedIdx != -1)
-                //{
-                //    for (int i = 0; i < sprites.Count; i++)
-                //        if (selectedIdx == i)
-                //            sprites[i].State = 1;
-                //        else
-                //            sprites[i].State = 0;
-                //}
+                if (selectedIdx != -1)
+                {
+                    for (int i = 0; i < entities.Count; i++)
+                        if (selectedIdx == i)
+                            entities[i].State = 1;
+                        else
+                            entities[i].State = 0;
+                }
             }
 
             //for (int i = 0; i < sprites.Count; i++)

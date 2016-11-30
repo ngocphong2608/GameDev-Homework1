@@ -21,6 +21,7 @@ namespace Homework1
         public override void Draw(GameTime gameTime, object helper)
         {
             //            base.Draw(gameTime, helper);
+            sprite.State = this.State;
             sprite.Draw(gameTime, helper);
         }
 
@@ -33,6 +34,11 @@ namespace Homework1
             {
                 sprite.Left = 0;
             }
+        }
+
+        public override bool IsSelected(float x, float y)
+        {
+            return sprite.IsSelected(x, y);
         }
     }
 }

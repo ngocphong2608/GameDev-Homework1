@@ -41,7 +41,6 @@ namespace Homework1
             //base.Update(gameTime);
         }
 
-        public int State = 0;
         public override void Draw(GameTime gameTime, object helper)
         {
             //base.Draw(gameTime, helper);
@@ -49,11 +48,11 @@ namespace Homework1
             if (State == 0)
                 spriteBatch.Draw(Textures[iTexture], new Vector2(Left, Top), Color.White);
             else
-                spriteBatch.Draw(Textures[iTexture], new Vector2(Left, Top), Color.Yellow);
+                spriteBatch.Draw(Textures[iTexture], new Vector2(Left, Top), Color.Black);
 
         }
 
-        public bool IsSelected(float x, float y)
+        public override bool IsSelected(float x, float y)
         {
             if (x >= Left && x < Left + Width
                 && y >= Top && y < Top + Height)

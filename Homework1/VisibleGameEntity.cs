@@ -13,5 +13,9 @@ namespace Homework1
         {
 
         }
+
+        public int State = 0;
+
+        public abstract bool IsSelected(float x, float y);
     }
 }
