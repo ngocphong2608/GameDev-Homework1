@@ -35,9 +35,9 @@ namespace Homework1
 
         public override void Update(GameTime gameTime)
         {
-            iTexture = (iTexture + 1) % nTextures;
+            //iTexture = (iTexture + 1) % nTextures;
 
-//            iTexture = ((int)(gameTime.TotalGameTime.TotalMilliseconds / Delay)) % nTextures;
+            iTexture = ((int)(gameTime.TotalGameTime.TotalMilliseconds / Delay)) % nTextures;
             //base.Update(gameTime);
         }
 

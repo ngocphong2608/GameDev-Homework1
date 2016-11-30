@@ -3,7 +3,7 @@
   <Class Name="Homework1.Game1" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAEEAAAAAAAwAAAAAAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAQEEEAAAEAAAwAAAAAAAAAAAAIAAAgAAAAAAACAAAQ=</HashCode>
       <FileName>Game1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -36,10 +36,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Homework1.MyTexture">
-    <Position X="6" Y="3" Width="1.5" />
+    <Position X="1.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgQAQAAAAAgAAAAIAgAAAAAAAAAAAAQ=</HashCode>
       <FileName>MyTexture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Homework1.Rockman">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rockman.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

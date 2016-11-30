@@ -14,7 +14,8 @@ namespace Homework1
         SpriteBatch spriteBatch;
 
         List<MyTexture> textures;
-        List<My2DSprite> sprites;
+        List<VisibleGameEntity> entities;
+
 
         public Game1()
         {
@@ -36,8 +37,7 @@ namespace Homework1
             // TODO: Add your initialization logic here
             this.IsMouseVisible = true;
             textures = new List<MyTexture>();
-            sprites = new List<My2DSprite>();
-
+            entities = new List<VisibleGameEntity>();
 
 
             base.Initialize();
@@ -58,9 +58,11 @@ namespace Homework1
             // load background
             textures.Add(new MyTexture("forest", 0, 0, 800, 600));
 
-            GenerateNPC("Angel", 15, 50, 0);
+            GenerateAngle("Angel", 15, 50, 0);
 
-            GenerateNPC("Rockman", 11, 50, 100);
+            GenerateRockman(50, 100);
+
+            //GenerateNPC("Rockman", 11, 50, 100);
         }
 
         /// <summary>
@@ -93,26 +95,29 @@ namespace Homework1
                 Vector2 screenPos = new Vector2(ScreenX, ScreenY);
                 Vector2 worldPos = Vector2.Transform(screenPos, Global.Camera.InvWVP);
 
-                int selectedIdx = -1;
-                for (int i = sprites.Count - 1; i >= 0; i--)
-                    if (sprites[i].IsSelected(worldPos.X, worldPos.Y)) //Global.MouseHelper.GetCurrentX(), Global.MouseHelper.GetCurrentY()))
-                    {
-                        selectedIdx = i;
-                        break;
-                    }
+                //int selectedIdx = -1;
+                //for (int i = sprites.Count - 1; i >= 0; i--)
+                //    if (sprites[i].IsSelected(worldPos.X, worldPos.Y)) //Global.MouseHelper.GetCurrentX(), Global.MouseHelper.GetCurrentY()))
+                //    {
+                //        selectedIdx = i;
+                //        break;
+                //    }
 
-                if (selectedIdx != -1)
-                {
-                    for (int i = 0; i < sprites.Count; i++)
-                        if (selectedIdx == i)
-                            sprites[i].State = 1;
-                        else
-                            sprites[i].State = 0;
-                }
+                //if (selectedIdx != -1)
+                //{
+                //    for (int i = 0; i < sprites.Count; i++)
+                //        if (selectedIdx == i)
+                //            sprites[i].State = 1;
+                //        else
+                //            sprites[i].State = 0;
+                //}
             }
 
-            for (int i = 0; i < sprites.Count; i++)
-                sprites[i].Update(gameTime);
+            //for (int i = 0; i < sprites.Count; i++)
+            //    sprites[i].Update(gameTime);
+
+            for (int i = 0; i < entities.Count; i++)
+                entities[i].Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -135,9 +140,15 @@ namespace Homework1
             }
 
             // drawing sprites
-            for (int i = 0; i < sprites.Count; i++)
+            //for (int i = 0; i < sprites.Count; i++)
+            //{
+            //    sprites[i].Draw(gameTime, spriteBatch);
+            //}
+
+            // drawing visible entities
+            for (int i = 0; i < entities.Count; i++)
             {
-                sprites[i].Draw(gameTime, spriteBatch);
+                entities[i].Draw(gameTime, spriteBatch);
             }
 
             spriteBatch.End();
@@ -145,11 +156,18 @@ namespace Homework1
             base.Draw(gameTime);
         }
 
-        private void GenerateNPC(string strResourcePrefix, int nTextures, float left, float top)
+        private void GenerateAngle(string strResourcePrefix, int nTextures, float left, float top)
         {
             List<Texture2D> textures = LoadTextures(strResourcePrefix, nTextures);
             My2DSprite newSprite = new My2DSprite(textures, left, top, 0, 0);
-            sprites.Add(newSprite);
+            //sprites.Add(newSprite);
+            entities.Add(newSprite);
+        }
+
+        private void GenerateRockman(int left, int top)
+        {
+            Rockman rockman = new Rockman(left, top);
+            entities.Add(rockman);
         }
 
         private List<Texture2D> LoadTextures(string strResourcePrefix, int nTextures)
